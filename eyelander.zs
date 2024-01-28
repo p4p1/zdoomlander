@@ -6,15 +6,11 @@
 
 class EyeLander: Fist
 {
-	int HeadCount;
-	property HeadCount: HeadCount;
-
 	Default
 	{
-		EyeLander.HeadCount 1;
 		Weapon.SlotNumber 0;
 		Weapon.SelectionOrder 3700;
-		Weapon.Kickback 10000000000;
+		Weapon.Kickback 100000;
 		Obituary "$OB_MPFIST";
 		Tag "$TAG_FIST";
 		+WEAPON.MELEEWEAPON
@@ -33,11 +29,15 @@ class EyeLander: Fist
 		Goto Ready;
 	Fire:
 		PUNG B 4;
-		PUNG C 4 
+		PUNG C 4
 		{
-			int dmg = 100000000000000 * (players[0].KillCount == 0) ? 1 : players[0].KillCount;
-			console.printf("%d\n", players[0].KillCount);
-			A_CustomPunch(dmg, norandom:true, range: 50, meleesound: "*fist");
+			int dmg = 2 * random(1,10);
+			int multiply = 1;
+			if (players[0].KillCount > 0)
+			{
+				multiply = players[0].KillCount;
+			}
+			A_CustomPunch(dmg * multiply, norandom:true, range: 50, meleesound: "*fist");
 		}
 		PUNG D 5;
 		PUNG C 4;

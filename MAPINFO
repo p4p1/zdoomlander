@@ -1,0 +1,5 @@
+// Put this in a MAPINFO lump
+gameinfo
+{
+  PlayerClasses = "DoomKnight"
+}

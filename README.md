@@ -22,3 +22,16 @@ This simple bash command will download the mod and launch it just edit the path 
 ```
 $ git clone https://github.com/p4p1/zdoomlander /tmp/zdoomlander && gzdoom -iwad /full_path/to_your/iwad_file.wad -file /tmp/zdoomlander/
 ```
+
+# How it works?
+
+More details can be found on the relevant blog post [here]().
+But to give a quick sum up I just replace the same logic as the original fist in Doom keeping the random nature but added
+a giant knockback effect and just multiply the damage with the current kill count.
+![https://github.com/p4p1/zdoomlander/blob/main/assets/code.png?raw=true](https://github.com/p4p1/zdoomlander/blob/main/assets/code.png?raw=true)
+
+# Next Steps
+
+ - [ ] Add also FragCount to the algorithm for multiplier support
+ - [ ] Maybe add the actual EyeLander
+ - [ ] Maybe add kill count on the HUD

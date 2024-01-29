@@ -32,6 +32,7 @@ a giant knockback effect and just multiply the damage with the current kill coun
 
 # Next Steps
 
+![https://github.com/p4p1/zdoomlander/blob/main/assets/fist.gif?raw=true](https://github.com/p4p1/zdoomlander/blob/main/assets/fist.gif?raw=true)
  - [ ] Add also FragCount to the algorithm for multiplier support
  - [ ] Maybe add the actual EyeLander
  - [ ] Maybe add kill count on the HUD
